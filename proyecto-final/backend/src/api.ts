@@ -4,13 +4,14 @@ import notFound from "./middlewares/error.middleware.js"
 import routes from "./routes/index.js";
 import cors from 'cors';
 import { sequelize } from './models/index.js';
+import { Application } from 'express';
 
-const api = express();
+const api: Application = express();
 
 // CORS: permitir el origen del frontend (usar FRONT_URL en .env si está definido)
 api.use(
   cors({
-    //origin: process.env.FRONT_URL || "http://localhost:5173",
+    origin: process.env.FRONT_URL || "http://localhost:5173",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
