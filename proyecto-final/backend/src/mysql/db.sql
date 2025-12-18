@@ -25,7 +25,7 @@ CREATE TABLE `Users` (
   `banned` BOOLEAN NOT NULL DEFAULT FALSE,  -- El usuario ha sido baneado, prohibido
   `banned_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,  -- Fecha de inicio del baneo
   `bannedUntilDate` DATETIME,  -- Fecha final del baneo
-  'confirmation_token' VARCHAR(50), -- Token de confirmación de alta del usuario
+  `confirmation_token` VARCHAR(50), -- Token de confirmación de alta del usuario
   `confirmation_ok` BOOLEAN NOT NULL DEFAULT FALSE, -- Indica si el usuario ha confirmado el Token que se le envía para sign up
   `deleted` BOOLEAN NOT NULL DEFAULT FALSE,  -- Registro borrado administrativamente?
   `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,  -- Fecha de registro
